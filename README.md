@@ -9,4 +9,4 @@ Se aplicaran conceptos como:
   - Test unitarias.
   - Kotlin DSL.
   - Corrutinas.
-  - compose y xml
+  - Compose y xml
