@@ -38,6 +38,8 @@ class HomeAdapter(items:List<CarItem> = emptyList()) :
         val binding = ItemCarBinding.bind(view)
         fun bind(carItem: CarItem){
             binding.imageView2.loadUrl(carItem.url)
+            binding.marca.text = carItem.marca
+            binding.modelo.text = carItem.modelo
         }
     }
 }

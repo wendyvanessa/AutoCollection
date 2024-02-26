@@ -11,6 +11,7 @@ class HomeViewModel : ViewModel() {
         value = listOf(CarItem(
             1,
             "Holitaaas soy un ferrary",
+            "2025",
             "https://i.pinimg.com/1200x/08/ca/9e/08ca9ecd4ed75c3539a9e7c104bbeab8.jpg")
         )
     }
