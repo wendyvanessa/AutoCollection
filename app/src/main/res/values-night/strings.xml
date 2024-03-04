@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cedula">cedula</string>
+    <string name="password">password</string>
+    <string name="recidencia">dirección residencia</string>
+    <string name="singoff">cerrar sesión</string>
+</resources>

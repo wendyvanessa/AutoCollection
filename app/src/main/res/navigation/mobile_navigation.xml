@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.autocollection.ui.navigation.home.HomeFragment"
+        android:name="com.example.autocollection.ui.navigation.shopping.ShoppingFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_shopping" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.autocollection.ui.navigation.notifications.NotificationsFragment"
+        android:name="com.example.autocollection.ui.navigation.profile.ProfileFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_profile" />
 </navigation>

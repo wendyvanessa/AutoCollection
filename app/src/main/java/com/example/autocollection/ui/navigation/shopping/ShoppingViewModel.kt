@@ -1,11 +1,11 @@
-package com.example.autocollection.ui.navigation.home
+package com.example.autocollection.ui.navigation.shopping
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.autocollection.data.CarItem
 
-class HomeViewModel : ViewModel() {
+class ShoppingViewModel : ViewModel() {
 
     private val _itemsLiveData = MutableLiveData<List<CarItem>>().apply {
         value = listOf(CarItem(

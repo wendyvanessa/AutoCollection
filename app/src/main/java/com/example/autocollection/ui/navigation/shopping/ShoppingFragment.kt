@@ -1,4 +1,4 @@
-package com.example.autocollection.ui.navigation.home
+package com.example.autocollection.ui.navigation.shopping
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,16 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.autocollection.databinding.FragmentHomeBinding
+import com.example.autocollection.databinding.FragmentShoppingBinding
 
-class HomeFragment : Fragment() {
+class ShoppingFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentShoppingBinding? = null
 
     private val binding get() = _binding!!
     val adapter by lazy {
-        HomeAdapter()
+        ShoppingAdapter()
     }
 
     override fun onCreateView(
@@ -23,16 +22,16 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this)[HomeViewModel::class.java]
+        val shoppingViewModel =
+            ViewModelProvider(this)[ShoppingViewModel::class.java]
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentShoppingBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         binding.recycler.adapter = adapter
-        homeViewModel.itemsLiveData.value
+        shoppingViewModel.itemsLiveData.value
 
-        homeViewModel.itemsLiveData.observe(requireActivity()) {
+        shoppingViewModel.itemsLiveData.observe(requireActivity()) {
             adapter.items = it
         }
         return root

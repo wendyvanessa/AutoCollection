@@ -25,8 +25,9 @@ inline fun <reified T: Activity> Context.startActivity(vararg pairs: Pair<String
 /**
  * Creación de función de extención sobre ImageView que se llamará "loadUrl"
  */
-fun ImageView.loadUrl(url: String){
-    Glide.with(this).load(url).into(this)
+fun ImageView.loadUrl(url: String,isProfile: Boolean){
+    if (isProfile){ Glide.with(this).load(url).circleCrop().into(this) }
+    else Glide.with(this).load(url).into(this)
 }
 
 fun ViewGroup.inflate(@LayoutRes layoutRes: Int):View{

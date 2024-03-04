@@ -1,7 +1,5 @@
-package com.example.autocollection.ui.navigation.home
+package com.example.autocollection.ui.navigation.shopping
 
-import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,8 +10,8 @@ import com.example.autocollection.ui.inflate
 import com.example.autocollection.ui.loadUrl
 import kotlin.properties.Delegates
 
-class HomeAdapter(items:List<CarItem> = emptyList()) :
-    RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+class ShoppingAdapter(items:List<CarItem> = emptyList()) :
+    RecyclerView.Adapter<ShoppingAdapter.ViewHolder>() {
 
     var items :  List<CarItem> by Delegates.observable(items){_ ,_ ,_ ->
         notifyDataSetChanged()
@@ -37,7 +35,7 @@ class HomeAdapter(items:List<CarItem> = emptyList()) :
 
         val binding = ItemCarBinding.bind(view)
         fun bind(carItem: CarItem){
-            binding.imageView2.loadUrl(carItem.url)
+            binding.imageView2.loadUrl(carItem.url,false)
             binding.marca.text = carItem.marca
             binding.modelo.text = carItem.modelo
         }

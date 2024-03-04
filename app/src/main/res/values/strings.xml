@@ -3,4 +3,11 @@
     <string name="title_home">Disponibles</string>
     <string name="title_dashboard">Propios</string>
     <string name="title_notifications">Mi perfil</string>
+
+    <!-- Datos login -->
+    <string name="cedula">cedula</string>
+    <string name="password">contraseña</string>
+    <string name="recidencia">dirección residencia</string>
+    <string name="singoff">cerrar sesión</string>
+
 </resources>
