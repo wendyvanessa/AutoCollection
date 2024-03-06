@@ -3,17 +3,22 @@ package com.example.autocollection.ui.navigation.shopping
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.autocollection.data.CarItem
+import com.example.autocollection.data.RetrofitServiceFactoy
+import com.example.autocollection.data.WebService
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
-class ShoppingViewModel : ViewModel() {
+class ShoppingViewModel() : ViewModel() {
+
+    val service: WebService = RetrofitServiceFactoy.makeWebService()
 
     private val _itemsLiveData = MutableLiveData<List<CarItem>>().apply {
-        value = listOf(CarItem(
-            1,
-            "Holitaaas soy un ferrary",
-            "2025",
-            "https://i.pinimg.com/1200x/08/ca/9e/08ca9ecd4ed75c3539a9e7c104bbeab8.jpg")
-        )
+        viewModelScope.launch {
+            value = service.getVehicles()
+        }
     }
     val itemsLiveData: LiveData<List<CarItem>> get() = _itemsLiveData
 

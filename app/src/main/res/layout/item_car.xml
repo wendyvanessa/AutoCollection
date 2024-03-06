@@ -14,11 +14,28 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginBottom="5dp">
 
-        <ImageView
-            android:id="@+id/imageView2"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:src="@drawable/car" />
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/car" />
+
+
+            <ImageView
+                android:id="@+id/favorite"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@id/imageView2"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="22dp"
+
+                android:layout_marginBottom="-2dp"
+                android:src="@drawable/baseline_favorite_24" />
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,7 +49,7 @@
 
             <TextView
                 android:id="@+id/marca"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:text="Amarot" />

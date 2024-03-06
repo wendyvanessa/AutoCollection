@@ -35,9 +35,11 @@ class ShoppingAdapter(items:List<CarItem> = emptyList()) :
 
         val binding = ItemCarBinding.bind(view)
         fun bind(carItem: CarItem){
-            binding.imageView2.loadUrl(carItem.url,false)
-            binding.marca.text = carItem.marca
-            binding.modelo.text = carItem.modelo
+            carItem.let {
+                binding.imageView2.loadUrl(carItem.url?:R.string.not_found.toString(),false)
+                binding.marca.text = carItem.marca
+                binding.modelo.text = carItem.modelo.toString()
+            }
         }
     }
 }
