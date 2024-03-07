@@ -10,6 +10,7 @@ import android.widget.ImageView
 import androidx.annotation.LayoutRes
 import androidx.core.os.bundleOf
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.autocollection.R
 
 /**
@@ -27,7 +28,10 @@ inline fun <reified T: Activity> Context.startActivity(vararg pairs: Pair<String
  */
 fun ImageView.loadUrl(url: String,isProfile: Boolean){
     if (isProfile){ Glide.with(this).load(url).circleCrop().into(this) }
-    else Glide.with(this).load(url).into(this)
+    else Glide.with(this)
+        .load(url)
+        .diskCacheStrategy(DiskCacheStrategy.NONE)
+        .into(this)
 }
 
 fun ViewGroup.inflate(@LayoutRes layoutRes: Int):View{
