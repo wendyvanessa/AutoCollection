@@ -10,5 +10,6 @@
     <string name="recidencia">dirección residencia</string>
     <string name="singoff">cerrar sesión</string>
     <string name="not_found">Sin contenido</string>
+    <string name="loading">Cargando...</string>
 
 </resources>

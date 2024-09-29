@@ -1,5 +1,6 @@
 package com.example.autocollection.data
 
+import retrofit2.Call
 import retrofit2.http.GET
 
 /**
@@ -7,6 +8,6 @@ import retrofit2.http.GET
  */
 interface WebService {
 
-    @GET("71b5cc66-2863-4f5c-b4fc-0848b1390d63")
-    suspend fun getVehicles(): List<CarItem>
+    @GET("5df59863-d1bd-4f6b-96f3-b4a6e9a773db")
+    fun getVehicles(): Call<List<CarItem>>
 }
